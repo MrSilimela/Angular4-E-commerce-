@@ -1,0 +1,8 @@
+Steps to follow when running this project:
+
+1. Create a database named pnp_store_db
+2. Import the database squema named pnp_store_db.sql to your MySql database(pnp_store_db)
+3. Cut the zip file called BackEnd.zip to your desired location and unzip it
+4. Run BackEnd with your desired IDE(eclipse, Netbeans, etc)
+5. Run your FrontEnd with VSCode or any other IDE you want
+6. Enjoy!!!  
