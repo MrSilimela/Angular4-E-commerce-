@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  
+</head>
+<body>
+
+
+<h1>Pick n Pay</h1>
+
+<nav>
+    <a routerLink="" routerLinkActive="active"><span class="glyphicon glyphicon-home"></span>Home</a>
+    <a routerLink="/register" routerLinkActive="active"><span class="glyphicon glyphicon-user"></span>Register</a>
+    <a routerLink="/login" routerLinkActive="active"><span class="glyphicon glyphicon-log-in"></span>Login</a>      
+</nav><br>
+
+<table class="table">
+  <tr><th></th><th>Name</th><th>Price</th><th></th></tr>
+  <tr *ngFor="let product of allProducts; let i = index" >       
+      <td><span><img  src= "{{ product.product_img }}" width="80" height="80"></span></td>
+      <td>{{product.product_name}}</td>
+      <td>R{{product.product_price}}</td>
+      <td>
+      <div class="input-group-btn">
+      <button type="button" class="btn btn-danger" (click)="onSelect()">Add to 
+      <span class="glyphicon glyphicon-shopping-cart"></span>
+      </button>
+      </div>
+      </td>
+      </tr>
+      </table>
+
+<footer>
+    This web application was designed by Lubabalo Silimela.
+  </footer>
+</body>
+</html>

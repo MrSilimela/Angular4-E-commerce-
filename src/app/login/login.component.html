@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  <h1>Pick n Pay</h1>
+    <nav>
+        <a routerLink="" routerLinkActive="active"><span class="glyphicon glyphicon-home"></span>Home</a>
+    <a routerLink="/register" routerLinkActive="active"><span class="glyphicon glyphicon-user"></span>Register</a>
+    <a routerLink="/login" routerLinkActive="active"><span class="glyphicon glyphicon-log-in"></span>Login</a>      
+  </nav><br><br>
+<div class="container" >
+    <h2>Please enter login credentials</h2>
+  <form>
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>      
+      <input id="username" type="text" class="form-control" name="username" [(ngModel)]="user.username" placeholder="username" required>
+    </div><br><br><br><br>
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>     
+      <input id="password" type="password" class="form-control" name="password" [(ngModel)]="user.password" placeholder="Password" required>
+    </div><br><br><br><br>
+    <div class="input-group-btn">
+      <button type="button" class="btn btn-info" (click)="LoginUser()">
+        <span class="glyphicon glyphicon-user"></span>Login
+      </button>
+    </div>  
+  </form>
+  <br>
+</div>
+
+
+<footer>
+    This web application was designed by Lubabalo Silimela.
+  </footer>
+</body>
+</html>

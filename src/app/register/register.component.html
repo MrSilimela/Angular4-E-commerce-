@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <h1>Pick n Pay</h1>
+    <nav>
+        <a routerLink="" routerLinkActive="active"><span class="glyphicon glyphicon-home"></span>Home</a>
+    <a routerLink="/register" routerLinkActive="active"><span class="glyphicon glyphicon-user"></span>Register</a>
+    <a routerLink="/login" routerLinkActive="active"><span class="glyphicon glyphicon-log-in"></span>Login</a>       
+  </nav><br><br>
+<div class="container">
+
+  <h2>Please fill in form for registration</h2>
+ 
+  <form>
+      <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+          <input id="name" type="text" class="form-control" name="name"  [(ngModel)]="user.name" placeholder="first name" required>
+        </div><br>
+      <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+          <input id="surname" type="text" class="form-control" name="surname"  [(ngModel)]="user.surname" placeholder="last name" required>
+        </div><br>
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+      <input id="email" type="text" class="form-control" name="email"  [(ngModel)]="user.email" placeholder="email" required>
+    </div><br>
+
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+      <input id="username" type="text" class="form-control" (keypress)="eventHandler($event.keyCode)"  name="username" id="username"  [(ngModel)]="user.username" placeholder="username"  required>
+    </div><br>
+
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+      <input id="password" type="password" class="form-control" name="password"  [(ngModel)]="user.password" placeholder="password" required>
+    </div><br>
+    <div class="input-group-btn">
+      <button type="button" class="btn btn-danger" (click)="createUser()">
+        <span class="glyphicon glyphicon-user"></span>Submit
+      </button>
+    </div>  
+  </form>
+  <br>
+</div>
+
+
+<footer>
+    This web application was designed by Lubabalo Silimela.
+  </footer>
+</body>
+</html>
